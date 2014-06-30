@@ -30,11 +30,19 @@ context 'This is how the program works' do
 			expect(student_cohort).to eq cohort
 		end
 
+
 		it 'prints the footer' do
 			footer = 'Overall we have 9 great students'
 			expect(self).to receive(:puts).with(footer)
 			print_footer
 		end
+
+		it 'counts the students' do
+			count = students_count{|student| students.length}
+			expect(students.length). to eq count
+		end
+
+
 	end
 
 end

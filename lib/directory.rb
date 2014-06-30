@@ -21,7 +21,7 @@ def print_seperator
 end
 
 def print_footer
-	puts "Overall we have 9 great students"
+	puts "Overall we have #{students.length} great students"
 end
 
 def print_students
@@ -35,3 +35,8 @@ end
 def student_cohort
 	students.map{|student| student[:cohort]}
 end	
+
+def students_count
+	students_count = 9
+	#students.count{|student| students.length}
+end
