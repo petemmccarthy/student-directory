@@ -2,11 +2,11 @@ require 'directory'
 
 context 'This is how the program works' do
 
-	describe 'The student direcory contains the following functions' do
+	describe 'The student directory contains the following functions' do
 		it 'prints the header' do
 			header = 'This is the MA student directory June'
       expect(self).to receive(:puts).with(header)
-      prints_header
+      print_header
 		end		
 
 		it 'can print a seperator' do
@@ -20,7 +20,7 @@ context 'This is how the program works' do
 			expect(student_names).to eq names
 		end
 
-		it 'can print student names' do
+		it 'can print student names with cohorts' do
 			expect(self).to receive(:puts).with(student_names.join(', '))
 			print_students
 		end
@@ -30,6 +30,11 @@ context 'This is how the program works' do
 			expect(student_cohort).to eq cohort
 		end
 
+		it 'prints the footer' do
+			footer = 'Overall we have 9 great students'
+			expect(self).to receive(:puts).with(footer)
+			print_footer
+		end
 	end
 
 end

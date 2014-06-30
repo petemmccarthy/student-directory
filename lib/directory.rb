@@ -1,19 +1,3 @@
-def prints_header
-	puts "This is the MA student directory June"
-end
-
-def print_seperator
-	puts "----"
-end
-
-def print_students
-	puts student_names.join(', ')
-end
-
-def student_names
-	students.map{|student| student[:name]}
-end
-
 def students
 	[
 	 {name: "Dr. Hannibal Lecter", cohort: "June"}, 
@@ -26,6 +10,26 @@ def students
 	 {name: "Freddy Kruger", cohort: "June"},
 	 {name: "The Joker", cohort: "June"}
 	]
+end
+
+def print_header
+	puts "This is the MA student directory June"
+end
+
+def print_seperator
+	puts "----"
+end
+
+def print_footer
+	puts "Overall we have 9 great students"
+end
+
+def print_students
+	puts student_names.join(', ')
+end
+
+def student_names
+	students.map{|student| student[:name]}
 end
 
 def student_cohort
