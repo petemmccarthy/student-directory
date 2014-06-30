@@ -23,7 +23,12 @@ context 'This is how the program works' do
 		it 'can print student names' do
 			expect(self).to receive(:puts).with(student_names.join(', '))
 			print_students
-		end	
+		end
+
+		it 'tells us the cohort of the students' do
+			cohort = students.map{|student| student[:cohort]}
+			expect(student_cohort).to eq cohort
+		end
 
 	end
 

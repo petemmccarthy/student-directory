@@ -16,14 +16,18 @@ end
 
 def students
 	[
-	 {name: "Dr. Hannibal Lecter"}, 
-	 {name: "Darth Vader"},
-	 {name: "Nurse Ratched"},
-	 {name: "Michael Corleone"},
-	 {name: "Alex De Large"},
-	 {name: "The Alien"},
-	 {name: "Terminator"},
-	 {name: "Freddy Kruger"},
-	 {name: "The Joker"}
+	 {name: "Dr. Hannibal Lecter", cohort: "June"}, 
+	 {name: "Darth Vader", cohort: "January"},
+	 {name: "Nurse Ratched", cohort: "June"},
+	 {name: "Michael Corleone", cohort: "August"},
+	 {name: "Alex De Large", cohort: "June"},
+	 {name: "The Alien", cohort: "June"},
+	 {name: "Terminator", cohort: "July"},
+	 {name: "Freddy Kruger", cohort: "June"},
+	 {name: "The Joker", cohort: "June"}
 	]
 end
+
+def student_cohort
+	students.map{|student| student[:cohort]}
+end	
