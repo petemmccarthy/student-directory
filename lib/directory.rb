@@ -19,11 +19,6 @@ def print_header
 	puts "This is the MA student directory June"
 end
 
-def print_seperator
-	puts "----"
-end
-
-
 def print_menu
 	puts "------MENU-------"
 	puts "1. Input the students"
@@ -39,6 +34,17 @@ def print_input_name
 	puts "Please enter your name"
 end
 
+def user_input
+	name = gets.chomp
+		return !name.empty? do
+			name = gets.chomp
+			user_input
+		end
+end
+
+# def name 
+# 	@students << name
+# end
 
 
 def print_footer
@@ -46,7 +52,6 @@ def print_footer
 end
 
 def print_students
-
 	puts student_names.join(', ')
 end
 
@@ -63,8 +68,8 @@ def students_count
 end
 
 print_header
-print_seperator
-#print_menu
+print_menu
 print_input_name
+user_input
 # print_students
 print_footer

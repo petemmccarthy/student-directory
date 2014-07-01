@@ -1,6 +1,6 @@
 require 'directory'
 
-context 'This is how the program works' do
+#context 'This is how the program works' do
 
 	describe 'The student directory contains the following functions' do
 		it 'prints the header' do
@@ -8,13 +8,6 @@ context 'This is how the program works' do
       expect(self).to receive(:puts).with(header)
       print_header
 		end		
-
-		it 'can print a seperator' do
-			seperator = "----"
-			expect(self).to receive(:puts).with(seperator)
-			print_seperator
-		end
-
 
 		it 'can print the menu' do
 			menu = [
@@ -26,17 +19,21 @@ context 'This is how the program works' do
 			"9. Exit",
 			"--------------------"
 			]
-			
+
 			menu.each { |line| expect(self).to receive(:puts).with(line)}
 
 			print_menu
 		end
 
-
-		it 'can take input' do
+		it 'asks for user input' do
 			input_name = 'Please enter your name'
 			expect(self).to receive(:puts).with(input_name)
 			print_input_name
+		end
+
+		it 'can take user input' do
+			expect(self).to receive(:gets).and_return("pete")
+			user_input
 		end
 
 		it 'tells us the names of the students' do
@@ -67,8 +64,6 @@ context 'This is how the program works' do
 		end
 
 
-
-
 	end
 
-end
+#end
