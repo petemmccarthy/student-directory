@@ -23,6 +23,24 @@ def print_seperator
 	puts "----"
 end
 
+
+def print_menu
+	puts "------MENU-------"
+	puts "1. Input the students"
+	puts "2. Show the students"
+	puts "3. Save the list to students.csv"
+	puts "4. Load the list from students.csv"
+	puts "9. Exit"
+	puts "--------------------"
+end
+
+
+def print_input_name
+	puts "Please enter your name"
+end
+
+
+
 def print_footer
 	puts "Overall we have #{students.length} great students"
 end
@@ -46,5 +64,7 @@ end
 
 print_header
 print_seperator
-print_students
+#print_menu
+print_input_name
+# print_students
 print_footer
