@@ -8,6 +8,9 @@ def students
 	 {name: "The Alien", cohort: "June"},
 	 {name: "Terminator", cohort: "July"},
 	 {name: "Freddy Kruger", cohort: "June"},
+	 {name: "Joe", cohort: "June"},
+	 {name: "Peter", cohort: "June"},
+	 {name: "Nikesh", cohort: "June"},
 	 {name: "The Joker", cohort: "June"}
 	]
 end
@@ -25,6 +28,7 @@ def print_footer
 end
 
 def print_students
+
 	puts student_names.join(', ')
 end
 
@@ -37,6 +41,10 @@ def student_cohort
 end	
 
 def students_count
-	students_count = 9
-	#students.count{|student| students.length}
+	students_count = students.count{ |student| students.length }
 end
+
+print_header
+print_seperator
+print_students
+print_footer
